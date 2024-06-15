@@ -80,11 +80,22 @@
 
                 <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link {{ request()->routeIs('coupon.index.*') ? 'active' : '' }}" href="{{ route('coupon.index') }}">
+                    <a class="menu-link {{ request()->routeIs('coupon.*') ? 'active' : '' }}" href="{{ route('coupon.index') }}">
 							<span class="menu-bullet">
-								<span class="bullet bullet-dot"></span>
+                                 <i class="fas fa-chart-pie"></i>
 							</span>
                         <span class="menu-title">Coupons</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link {{ request()->routeIs('setting.*') ? 'active' : '' }}" href="{{ route('setting.index') }}">
+							<span class="menu-bullet">
+                                <i class="ki-outline ki-wrench fs-2x"></i>
+							</span>
+                        <span class="menu-title">Settings</span>
                     </a>
                     <!--end:Menu link-->
                 </div>
