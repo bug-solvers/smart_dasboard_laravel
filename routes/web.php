@@ -44,10 +44,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::prefix('setting')->name('setting.')->group(function () {
         Route::get('/', [SettingController::class, 'index'])->name('index');
         Route::get('/create', [SettingController::class, 'create'])->name('create');
-        Route::post('/store', [SettingController::class, 'store'])->name('store');
         Route::get('/destroy/{setting}', [SettingController::class, 'destroy'])->name('destroy');
         Route::get('/edit/{setting}', [SettingController::class, 'edit'])->name('edit');
-        Route::put('/update/{setting}', [SettingController::class, 'update'])->name('update');
     });
 
 });

@@ -12,10 +12,27 @@ class SettingForm extends Component
     public $image_value;
     public $value;
     public $text_value;
+    public $setting;
 
-    public function mount()
+    public function mount($setting = null)
     {
         $this->inputType = reset(Setting::$keys);
+
+        $this->setting = $setting;
+        if($setting)
+        {
+            $this->key = $setting->key;
+            if($setting->type == "textarea")
+            {
+                $this->text_value = $setting->value;
+            }elseif($setting->type == "text")
+            {
+                $this->value = $setting->value;
+            }else{
+                $this->image_value = $this->value;
+            }
+            $this->inputType = $setting->type;
+        }
     }
 
     public function render()
@@ -31,7 +48,6 @@ class SettingForm extends Component
 
     public function store()
     {
-        // Validate and store based on inputType
         if ($this->inputType == 'text') {
             Setting::updateOrCreate(
                 ['key' => $this->key],
@@ -49,11 +65,8 @@ class SettingForm extends Component
                 ['value' => $path, 'type' => $this->inputType]
             );
         }
+        toast('Setting done Successfully','success');
 
-        // Reset form fields after successful storage
-        $this->reset(['value', 'image_value', 'text_value']);
-
-        // Optionally, dispatch a success message or event
-        $this->dispatch('success', __('Setting saved successfully.'));
+        return redirect()->route('setting.index');
     }
 }

@@ -14,6 +14,7 @@
                 <form class="d-flex flex-column align-items-start gap-4" method="post"
                 enctype="multipart/form-data">
                     @method('PUT')
+                    <livewire:setting-form :setting="$setting"/>
                 </form>
             </div>
         </div>

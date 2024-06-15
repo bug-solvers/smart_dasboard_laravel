@@ -30,27 +30,6 @@ class SettingController extends Controller
         return view('pages.apps.settings.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(CouponRequest $request)
-    {
-        Coupon::create([
-            'code'=>$request->code,
-            'value'=>$request->value,
-            'discount_limit'=>$request->discount_limit,
-            'start_date'=>$request->start_date,
-            'end_date'=>$request->end_date,
-            'usage_limit_per_user'=>$request->usage_limit_per_user,
-            'usage_limit'=>$request->usage_limit,
-            'status'=>$request->status,
-            'minimum_using'=>$request->minimum_using,
-            'notes'=>$request->notes,
-        ]);
-        toast('Coupon Created Successfully','success');
-        return to_route('coupon.index');
-    }
-
 
     /**
      * Show the form for editing the specified resource.
