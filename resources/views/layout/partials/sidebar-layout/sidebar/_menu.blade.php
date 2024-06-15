@@ -78,42 +78,64 @@
 				</div>
 				<!--end:Menu sub-->
 
-                <div class="menu-item">
-                    <!--begin:Menu link-->
-                    <a class="menu-link {{ request()->routeIs('coupon.*') ? 'active' : '' }}" href="{{ route('coupon.index') }}">
-							<span class="menu-bullet">
-                                 <i class="fas fa-chart-pie"></i>
-							</span>
-                        <span class="menu-title">Coupons</span>
-                    </a>
-                    <!--end:Menu link-->
-                </div>
-
-                <div class="menu-item">
-                    <!--begin:Menu link-->
-                    <a class="menu-link {{ request()->routeIs('setting.*') ? 'active' : '' }}" href="{{ route('setting.index') }}">
-							<span class="menu-bullet">
-                                <i class="ki-outline ki-wrench fs-2x"></i>
-							</span>
-                        <span class="menu-title">Settings</span>
-                    </a>
-                    <!--end:Menu link-->
-                </div>
-
-                <div class="menu-item">
-                    <!--begin:Menu link-->
-                    <a class="menu-link {{ request()->routeIs('setting.*') ? 'active' : '' }}" href="{{ route('setting.index') }}">
-							<span class="menu-bullet">
-                               <i class="ki-duotone ki-setting-4"></i>
-							</span>
-                        <span class="menu-title">SEO</span>
-                    </a>
-                    <!--end:Menu link-->
-                </div>
-
 
             </div>
 			<!--end:Menu item-->
+
+            <!--begin:Menu item-->
+            <div data-kt-menu-trigger="click" class="menu-item menu-accordion {{ request()->routeIs('user-management.*') ? 'here show' : '' }}">
+                <!--begin:Menu link-->
+                <span class="menu-link">
+					<i class="ki-duotone ki-setting-4"></i>
+					<span class="menu-title">Settings</span>
+					<span class="menu-arrow"></span>
+				</span>
+                <!--end:Menu link-->
+                <!--begin:Menu sub-->
+                <div class="menu-sub menu-sub-accordion">
+                    <!--begin:Menu item-->
+                    <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a class="menu-link {{ request()->routeIs('setting.*') ? 'active' : '' }}" href="{{ route('setting.index') }}">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+                            <span class="menu-title">Settings</span>
+                        </a>
+                        <!--end:Menu link-->
+                    </div>
+
+                    <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a class="menu-link {{ request()->routeIs('coupon.*') ? 'active' : '' }}" href="{{ route('coupon.index') }}">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+                            <span class="menu-title">Coupons</span>
+                        </a>
+                        <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+
+                    <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a class="menu-link {{ request()->routeIs('seo.main.*') ? 'active' : '' }}" href="{{ route('seo.main.index') }}">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+                            <span class="menu-title">SEO</span>
+                        </a>
+                        <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+
+                </div>
+                <!--end:Menu sub-->
+
+
+            </div>
+            <!--end:Menu item-->
+
 			<!--begin:Menu item-->
 			<div class="menu-item pt-5">
 				<!--begin:Menu content-->
