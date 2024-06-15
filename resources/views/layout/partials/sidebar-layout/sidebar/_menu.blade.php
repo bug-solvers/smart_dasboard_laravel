@@ -77,6 +77,18 @@
 					<!--end:Menu item-->
 				</div>
 				<!--end:Menu sub-->
+
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link {{ request()->routeIs('coupon.index.*') ? 'active' : '' }}" href="{{ route('coupon.index') }}">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+                        <span class="menu-title">Coupons</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+
 			</div>
 			<!--end:Menu item-->
 			<!--begin:Menu item-->
