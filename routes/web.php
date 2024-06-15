@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Apps\CouponController;
 use App\Http\Controllers\Apps\RoleManagementController;
+use App\Http\Controllers\Apps\SEOMainController;
 use App\Http\Controllers\Apps\SettingController;
 use App\Http\Controllers\Apps\UserManagementController;
 use App\Http\Controllers\Auth\SocialiteController;
@@ -46,6 +47,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/create', [SettingController::class, 'create'])->name('create');
         Route::get('/destroy/{setting}', [SettingController::class, 'destroy'])->name('destroy');
         Route::get('/edit/{setting}', [SettingController::class, 'edit'])->name('edit');
+    });
+
+    Route::prefix('seo_main')->name('seo.main.')->group(function () {
+        Route::get('/', [SEOMainController::class, 'index'])->name('index');
+        Route::get('/create', [SEOMainController::class, 'create'])->name('create');
+        Route::post('/create', [SEOMainController::class, 'store'])->name('store');
+        Route::get('/destroy/{setting}', [SEOMainController::class, 'destroy'])->name('destroy');
+        Route::get('/edit/{setting}', [SEOMainController::class, 'edit'])->name('edit');
     });
 
 });

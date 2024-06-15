@@ -64,4 +64,15 @@ Breadcrumbs::for('settings.index', function (BreadcrumbTrail $trail) {
     $trail->push('Settings', route('setting.index'));
 });
 
+Breadcrumbs::for('seo_main.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('SEO Main', route('seo.main.index'));
+});
+
+Breadcrumbs::for('seo_main.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('seo_main.index');
+    $trail->push('SEO Create', route('seo.main.create'));
+});
+
+
 
