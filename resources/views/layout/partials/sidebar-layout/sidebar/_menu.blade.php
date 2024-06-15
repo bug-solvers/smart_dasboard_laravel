@@ -86,7 +86,7 @@
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion {{ request()->routeIs('user-management.*') ? 'here show' : '' }}">
                 <!--begin:Menu link-->
                 <span class="menu-link">
-					<i class="ki-duotone ki-setting-4"></i>
+					<span class="menu-icon">{!! getIcon('rocket', 'fs-2') !!}</span>
 					<span class="menu-title">Settings</span>
 					<span class="menu-arrow"></span>
 				</span>
