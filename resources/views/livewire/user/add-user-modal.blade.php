@@ -29,7 +29,6 @@
                             <label class="required fw-semibold fs-6 mb-2">Full Name</label>
                             <!--end::Label-->
                             <!--begin::Input-->
-                            {{$name}}
                             <input type="text" wire:model="name" name="name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="Full name"/>
                             <!--end::Input-->
                             @error('name')
@@ -68,9 +67,6 @@
                                         <label class="form-check-label" for="kt_modal_update_role_option_{{ $role->id }}">
                                             <div class="fw-bold text-gray-800">
                                                 {{ ucwords($role->name) }}
-                                            </div>
-                                            <div class="text-gray-600">
-                                                {{ $role->description }}
                                             </div>
                                         </label>
                                         <!--end::Label-->

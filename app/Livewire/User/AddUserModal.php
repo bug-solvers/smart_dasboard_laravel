@@ -16,7 +16,7 @@ class AddUserModal extends Component
     use WithFileUploads;
 
     public $user_id;
-    public $name = "test";
+    public $name;
     public $email;
     public $role;
 
@@ -38,62 +38,27 @@ class AddUserModal extends Component
     {
         $roles = Role::all();
 
-        $roles_description = [
-            'administrator' => 'Best for business owners and company administrators',
-            'developer' => 'Best for developers or people primarily using the API',
-            'analyst' => 'Best for people who need full access to analytics data, but don\'t need to update business settings',
-            'support' => 'Best for employees who regularly refund payments and respond to disputes',
-            'trial' => 'Best for people who need to preview content data, but don\'t need to make any updates',
-        ];
-
-        foreach ($roles as $i => $role) {
-            $roles[$i]->description = $roles_description[$role->name] ?? '';
-        }
-
         return view('livewire.user.add-user-modal', compact('roles'));
     }
-
     public function submit()
     {
+        $this->validate();
         // Validate the form input data
         DB::transaction(function () {
             $data = [
                 'name' => $this->name,
             ];
 
-            dd($data);
-
-            if (!$this->edit_mode) {
-                $data['password'] = Hash::make($this->email);
-            }
+            $data['password'] = Hash::make($this->email);
 
             // Update or Create a new user record in the database
             $data['email'] = $this->email;
 
-            dd($data);
-
             $admin = Admin::find($this->user_id) ?? Admin::create($data);
 
-            if ($this->edit_mode) {
-                foreach ($data as $k => $v) {
-                    $admin->$k = $v;
-                }
-                $admin->save();
-            }
+            $admin->assignRole($this->role);
 
-            if ($this->edit_mode) {
-                // Assign selected role for user
-                $admin->syncRoles($this->role);
-
-                // Emit a success event with a message
-                $this->dispatch('success', __('User updated'));
-            } else {
-                // Assign selected role for user
-                $admin->assignRole($this->role);
-
-                // Emit a success event with a message
-                $this->dispatch('success', __('New admin created'));
-            }
+            $this->dispatch('success', __('New admin created'));
         });
 
         // Reset the form fields after successful submission
@@ -113,18 +78,6 @@ class AddUserModal extends Component
 
         // Emit a success event with a message
         $this->dispatch('success', 'User successfully deleted');
-    }
-
-    public function updateUser($id)
-    {
-        $this->edit_mode = true;
-
-        $user = Admin::find($id);
-
-        $this->user_id = $user->id;
-        $this->name = $user->name;
-        $this->email = $user->email;
-        $this->role = $user->roles?->first()->name ?? '';
     }
 
     public function hydrate()
