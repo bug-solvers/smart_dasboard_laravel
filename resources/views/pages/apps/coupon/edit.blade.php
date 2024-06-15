@@ -1,12 +1,9 @@
 <x-default-layout>
 
     @section('title')
-        Create coupon
+        Edit coupon
     @endsection
 
-    @section('breadcrumbs')
-{{--        {{ Breadcrumbs::render('coupon.edit') }}--}}
-    @endsection
     <div class="d-flex flex-column flex-column-fluid">
         <div class="card shadow-sm w-50 m-auto">
             <div class="card-body">

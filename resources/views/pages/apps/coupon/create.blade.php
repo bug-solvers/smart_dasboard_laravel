@@ -5,7 +5,7 @@
     @endsection
 
     @section('breadcrumbs')
-                {{ Breadcrumbs::render('coupon.index') }}
+                {{ Breadcrumbs::render('coupon.create') }}
     @endsection
 
     <div class="d-flex flex-column flex-column-fluid">

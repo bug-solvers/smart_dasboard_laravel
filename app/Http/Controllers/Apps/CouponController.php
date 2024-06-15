@@ -45,7 +45,7 @@ class CouponController extends Controller
             'minimum_using'=>$request->minimum_using,
             'notes'=>$request->notes,
         ]);
-//        toast('Coupon Created Successfully','success');
+        toast('Coupon Created Successfully','success');
         return to_route('coupon.index');
     }
 
@@ -83,7 +83,7 @@ class CouponController extends Controller
             'minimum_using'=>$request->minimum_using,
             'notes'=>$request->notes,
         ]);
-//        toast('Coupon Updated Successfully','success');
+        toast('Coupon Updated Successfully','success');
         return to_route('coupon.index');
     }
 

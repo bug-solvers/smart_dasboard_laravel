@@ -53,7 +53,8 @@ Breadcrumbs::for('coupon.index', function (BreadcrumbTrail $trail) {
     $trail->push('Coupons', route('coupon.index'));
 });
 
-Breadcrumbs::for('coupon.edit', function (BreadcrumbTrail $trail, Coupon $coupon) {
+Breadcrumbs::for('coupon.create', function (BreadcrumbTrail $trail) {
     $trail->parent('coupon.index');
-    $trail->push(ucwords($coupon->name), route('coupon.edit', $coupon));
+    $trail->push('Creat coupon', route('coupon.create'));
 });
+

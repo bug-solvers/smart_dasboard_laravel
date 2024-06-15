@@ -66,6 +66,10 @@
 @foreach(getCustomJs() as $path)
     {!! sprintf('<script src="%s"></script>', asset($path)) !!}
 @endforeach
+
+@include('sweetalert::alert')
+
+
 <!--end::Custom Javascript-->
 @stack('scripts')
 <!--end::Javascript-->
