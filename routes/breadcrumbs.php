@@ -58,3 +58,10 @@ Breadcrumbs::for('coupon.create', function (BreadcrumbTrail $trail) {
     $trail->push('Creat coupon', route('coupon.create'));
 });
 
+
+Breadcrumbs::for('settings.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('Settings', route('setting.index'));
+});
+
+

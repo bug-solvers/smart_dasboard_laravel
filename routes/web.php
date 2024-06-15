@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Apps\CouponController;
 use App\Http\Controllers\Apps\RoleManagementController;
+use App\Http\Controllers\Apps\SettingController;
 use App\Http\Controllers\Apps\UserManagementController;
 use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\DashboardController;
@@ -38,6 +39,15 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/destroy/{coupon}', [CouponController::class, 'destroy'])->name('destroy');
         Route::get('/edit/{coupon}', [CouponController::class, 'edit'])->name('edit');
         Route::put('/update/{coupon}', [CouponController::class, 'update'])->name('update');
+    });
+
+    Route::prefix('setting')->name('setting.')->group(function () {
+        Route::get('/', [SettingController::class, 'index'])->name('index');
+        Route::get('/create', [SettingController::class, 'create'])->name('create');
+        Route::post('/store', [SettingController::class, 'store'])->name('store');
+        Route::get('/destroy/{setting}', [SettingController::class, 'destroy'])->name('destroy');
+        Route::get('/edit/{setting}', [SettingController::class, 'edit'])->name('edit');
+        Route::put('/update/{setting}', [SettingController::class, 'update'])->name('update');
     });
 
 });
