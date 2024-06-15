@@ -100,7 +100,19 @@
                     <!--end:Menu link-->
                 </div>
 
-			</div>
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link {{ request()->routeIs('setting.*') ? 'active' : '' }}" href="{{ route('setting.index') }}">
+							<span class="menu-bullet">
+                               <i class="ki-duotone ki-setting-4"></i>
+							</span>
+                        <span class="menu-title">SEO</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+
+
+            </div>
 			<!--end:Menu item-->
 			<!--begin:Menu item-->
 			<div class="menu-item pt-5">
