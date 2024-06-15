@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Coupon;
 use App\Models\User;
 use Diglactic\Breadcrumbs\Breadcrumbs;
 use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
@@ -47,7 +48,12 @@ Breadcrumbs::for('user-management.roles.show', function (BreadcrumbTrail $trail,
 });
 
 // Home > Dashboard > User Management > Permission
-Breadcrumbs::for('user-management.permissions.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('user-management.index');
-    $trail->push('Permissions', route('user-management.permissions.index'));
+Breadcrumbs::for('coupon.index', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('Coupons', route('coupon.index'));
+});
+
+Breadcrumbs::for('coupon.edit', function (BreadcrumbTrail $trail, Coupon $coupon) {
+    $trail->parent('coupon.index');
+    $trail->push(ucwords($coupon->name), route('coupon.edit', $coupon));
 });

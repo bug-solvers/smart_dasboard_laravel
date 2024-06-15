@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Apps\CouponController;
-use App\Http\Controllers\Apps\PermissionManagementController;
 use App\Http\Controllers\Apps\RoleManagementController;
 use App\Http\Controllers\Apps\UserManagementController;
 use App\Http\Controllers\Auth\SocialiteController;
@@ -30,8 +29,15 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::resource('/user-management/roles', RoleManagementController::class);
     });
 
-    Route::name('coupon.')->group(function () {
-        Route::resource('/coupon', CouponController::class);
+
+
+    Route::prefix('coupon')->name('coupon.')->group(function () {
+        Route::get('/', [CouponController::class, 'index'])->name('index');
+        Route::get('/create', [CouponController::class, 'create'])->name('create');
+        Route::post('/store', [CouponController::class, 'store'])->name('store');
+        Route::get('/destroy/{coupon}', [CouponController::class, 'destroy'])->name('destroy');
+        Route::get('/edit/{coupon}', [CouponController::class, 'edit'])->name('edit');
+        Route::put('/update/{coupon}', [CouponController::class, 'update'])->name('update');
     });
 
 });

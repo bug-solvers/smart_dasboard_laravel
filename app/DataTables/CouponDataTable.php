@@ -21,11 +21,11 @@ class CouponDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->editColumn('created_at', function (Admin $admin) {
-                return $admin->created_at->format('d M Y, h:i a');
+            ->editColumn('created_at', function (Coupon $coupon) {
+                return $coupon->created_at->format('d M Y, h:i a');
             })
-            ->addColumn('action', function (Admin $admin) {
-                return view('pages/apps.user-management.users.columns._actions', compact('admin'));
+            ->addColumn('action', function (Coupon $coupon) {
+                return view('pages/apps.coupon.columns._actions', compact('coupon'));
             })
             ->setRowId('id');
     }
@@ -63,7 +63,10 @@ class CouponDataTable extends DataTable
         return [
             Column::make('code')->title('Code'),
             Column::make('value')->title('Value'),
-            Column::make('created_at')->title('Joined Date')->addClass('text-nowrap'),
+            Column::make('start_date')->title('Start at')->addClass('text-nowrap'),
+            Column::make('end_date')->title('End at')->addClass('text-nowrap'),
+            Column::make('created_at')->title('Created at')->addClass('text-nowrap'),
+            Column::make('status')->title('Status')->addClass('text-nowrap'),
             Column::computed('action')
                 ->addClass('text-end text-nowrap')
                 ->exportable(false)
