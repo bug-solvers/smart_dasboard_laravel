@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Apps\CouponController;
 use App\Http\Controllers\Apps\PermissionManagementController;
 use App\Http\Controllers\Apps\RoleManagementController;
 use App\Http\Controllers\Apps\UserManagementController;
@@ -27,6 +28,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::name('user-management.')->group(function () {
         Route::resource('/user-management/users', UserManagementController::class);
         Route::resource('/user-management/roles', RoleManagementController::class);
+    });
+
+    Route::name('coupon.')->group(function () {
+        Route::resource('/coupon', CouponController::class);
     });
 
 });
