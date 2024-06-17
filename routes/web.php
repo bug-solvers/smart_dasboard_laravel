@@ -56,7 +56,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/destroy/{setting}', [SEOMainController::class, 'destroy'])->name('destroy');
         Route::get('/edit/{setting}', [SEOMainController::class, 'edit'])->name('edit');
     });
-
 });
 
 Route::get('/error', function () {

@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Spatie\Translatable\HasTranslations;
 
 class Program extends Model
 {
-    use HasFactory, HasTranslations;
+    use HasTranslations;
 
     const PATH = 'images/programs';
 
@@ -56,5 +57,11 @@ class Program extends Model
     public function getImageAttribute($value): string
     {
         return asset(self::PATH . DIRECTORY_SEPARATOR . $value);
+    }
+
+
+    public function seo(): MorphOne
+    {
+        return $this->morphOne(SEOPage::class, 'seoable');
     }
 }
