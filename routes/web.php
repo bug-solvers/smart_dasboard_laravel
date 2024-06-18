@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Apps\CouponController;
+use App\Http\Controllers\Apps\ProgramController;
 use App\Http\Controllers\Apps\RoleManagementController;
 use App\Http\Controllers\Apps\SEOMainController;
 use App\Http\Controllers\Apps\SettingController;
@@ -55,6 +56,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/create', [SEOMainController::class, 'store'])->name('store');
         Route::get('/destroy/{setting}', [SEOMainController::class, 'destroy'])->name('destroy');
         Route::get('/edit/{setting}', [SEOMainController::class, 'edit'])->name('edit');
+    });
+
+    Route::prefix('program')->name('program.')->group(function () {
+        Route::get('/', [ProgramController::class, 'index'])->name('index');
+        Route::get('/create', [ProgramController::class, 'create'])->name('create');
+        Route::post('/create', [ProgramController::class, 'store'])->name('store');
+        Route::get('/destroy/{setting}', [ProgramController::class, 'destroy'])->name('destroy');
+        Route::get('/edit/{setting}', [ProgramController::class, 'edit'])->name('edit');
     });
 });
 

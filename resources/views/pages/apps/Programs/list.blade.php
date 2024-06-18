@@ -1,7 +1,7 @@
 <x-default-layout>
 
     @section('title')
-        Programs
+        Coupons
     @endsection
 
     @section('breadcrumbs')
@@ -16,7 +16,7 @@
                 <!--begin::Search-->
                 <div class="d-flex align-items-center position-relative my-1">
                     {!! getIcon('magnifier', 'fs-3 position-absolute ms-5') !!}
-                    <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-13" placeholder="Search Program" id="mySearchInput"/>
+                    <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-13" placeholder="Search Coupon" id="mySearchInput"/>
                 </div>
                 <!--end::Search-->
             </div>
@@ -27,9 +27,9 @@
                 <!--begin::Toolbar-->
                 <div class="d-flex justify-content-end" data-kt-user-table-toolbar="base">
                     <!--begin::Add user-->
-                    <a href="{{route('program.create')}}" type="button" class="btn btn-primary">
+                    <a href="{{route('coupon.create')}}" type="button" class="btn btn-primary">
                         {!! getIcon('plus', 'fs-2', '', 'i') !!}
-                        Add Program
+                        Add Coupon
                     </a>
                     <!--end::Add user-->
                 </div>
