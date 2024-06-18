@@ -14,10 +14,39 @@
 
     <!--begin::Menu item-->
     <div class="menu-item px-3">
-        <a href="{{route('seo.main.destroy', $seo->id)}}" class="menu-link px-3">
+
+        <a data-bs-toggle="modal" data-bs-target="#kt_modal_1"  class="menu-link px-3">
             Delete
         </a>
     </div>
     <!--end::Menu item-->
 </div>
+
+<div class="modal fade" tabindex="-1" id="kt_modal_1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Delete Row</h3>
+
+                <!--begin::Close-->
+                <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="ki-duotone ki-cross fs-1"><span class="path1"></span><span class="path2"></span></i>
+                </div>
+                <!--end::Close-->
+            </div>
+
+            <div class="modal-body">
+                <p>You sure you want to delete this row ?</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <a href="{{route('seo.main.destroy', $seo->id)}}" class="btn btn-primary">Yes, Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--end::Menu-->
+
+
