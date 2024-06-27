@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('admins', function (Blueprint $table) {
-            $table->datetime('last_login_at')->nullable();
-            $table->string('last_login_ip')->nullable();
+        Schema::create('settings', function (Blueprint $table) {
+            $table->string('key');
+            $table->enum('type', ['text', 'image', 'textarea']);
+            $table->longText('value');
         });
     }
 
@@ -22,7 +23,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('settings', function (Blueprint $table) {
             //
         });
     }

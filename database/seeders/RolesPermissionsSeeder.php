@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Permission;
@@ -66,7 +67,7 @@ class RolesPermissionsSeeder extends Seeder
             Role::create(['name' => $role])->syncPermissions($full_permissions_list);
         }
 
-        User::find(1)->assignRole('administrator');
-        User::find(2)->assignRole('developer');
+        Admin::find(1)->assignRole('administrator');
+        Admin::find(2)->assignRole('developer');
     }
 }
