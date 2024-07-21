@@ -3,7 +3,7 @@
     <!--begin::Heading-->
     <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url({{asset('assets/media/misc/menu-header-bg.jpg')}})">
         <!--begin::Title-->
-        <h3 class="text-white fw-semibold px-9 mt-10 mb-6">Notifications there
+        <h3 class="text-white fw-semibold px-9 mt-10 mb-6">Notifications
         </h3>
         <!--end::Title-->
         <!--begin::Tabs-->
