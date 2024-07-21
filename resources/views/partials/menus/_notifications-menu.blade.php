@@ -3,20 +3,18 @@
 	<!--begin::Heading-->
 	<div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('assets/media/misc/menu-header-bg.jpg')">
 		<!--begin::Title-->
-		<h3 class="text-white fw-semibold px-9 mt-10 mb-6">Notifications
-		<span class="fs-8 opacity-75 ps-3">24 reports</span></h3>
+		<h3 class="text-white fw-semibold px-9 mt-10 mb-6">Notifications there
+        </h3>
 		<!--end::Title-->
 		<!--begin::Tabs-->
 		<ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-semibold px-9">
 			<li class="nav-item">
-				<a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_1">Alerts</a>
+				<a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_1">New</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active" data-bs-toggle="tab" href="#kt_topbar_notifications_2">Updates</a>
+				<a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active" data-bs-toggle="tab" href="#kt_topbar_notifications_2">Old</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_3">Logs</a>
-			</li>
+
 		</ul>
 		<!--end::Tabs-->
 	</div>
@@ -218,223 +216,7 @@
 			<!--end::Wrapper-->
 		</div>
 		<!--end::Tab panel-->
-		<!--begin::Tab panel-->
-		<div class="tab-pane fade" id="kt_topbar_notifications_3" role="tabpanel">
-			<!--begin::Items-->
-			<div class="scroll-y mh-325px my-5 px-8">
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-success me-4">200 OK</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">New order</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">Just now</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">New customer</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">2 hrs</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-success me-4">200 OK</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Payment process</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">5 hrs</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Search query</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">2 days</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-success me-4">200 OK</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">API connection</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">1 week</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-success me-4">200 OK</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Database restore</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">Mar 5</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">System update</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">May 15</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Server OS update</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">Apr 3</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-warning me-4">300 WRN</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">API rollback</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">Jun 30</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Refund process</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">Jul 10</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Withdrawal process</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">Sep 10</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-				<!--begin::Item-->
-				<div class="d-flex flex-stack py-4">
-					<!--begin::Section-->
-					<div class="d-flex align-items-center me-2">
-						<!--begin::Code-->
-						<span class="w-70px badge badge-light-danger me-4">500 ERR</span>
-						<!--end::Code-->
-						<!--begin::Title-->
-						<a href="#" class="text-gray-800 text-hover-primary fw-semibold">Mail tasks</a>
-						<!--end::Title-->
-					</div>
-					<!--end::Section-->
-					<!--begin::Label-->
-					<span class="badge badge-light fs-8">Dec 10</span>
-					<!--end::Label-->
-				</div>
-				<!--end::Item-->
-			</div>
-			<!--end::Items-->
-			<!--begin::View more-->
-			<div class="py-3 text-center border-top">
-				<a href="#" class="btn btn-color-gray-600 btn-active-color-primary">View All {!! getIcon('arrow-right', 'fs-5') !!}</a>
-			</div>
-			<!--end::View more-->
-		</div>
-		<!--end::Tab panel-->
+
 	</div>
 	<!--end::Tab content-->
 </div>

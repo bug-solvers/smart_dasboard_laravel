@@ -5,6 +5,8 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Address;
+use App\Models\Admin;
+use App\Models\Notification;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +18,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+       $x =  Notification::create([
+           'id' => 1,
+           'type' => 'new',
+            'notifiable_type' => Admin::class,
+            'notifiable_id' => 2,
+            'data' => json_encode([
+                'title' => 'new notificaton',
+                'body' => 'new notification from gouda'
+            ])
+        ]);
+
+       dd($x);
+
+
+
         $this->call([
             UsersSeeder::class,
             RolesPermissionsSeeder::class,
